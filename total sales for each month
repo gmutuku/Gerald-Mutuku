@@ -1,0 +1,5 @@
+SELECT EXTRACT(YEAR FROM SaleDate) AS Year, 
+       EXTRACT(MONTH FROM SaleDate) AS Month, 
+       SUM(Amount) AS MonthlySales
+FROM Sales
+GROUP BY Year, Month;
